@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=Dancing+Script:wght@700&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+.diary-page {
+  background: #000;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+  url('https://images.unsplash.com/photo-1475116127127-e3ce09ee84e1?q=80&w=2070&auto=format&fit=crop'
+);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;       
+  padding: 0;        
+}
+
+
+.horror-form {
+  background: #e4d5b7 url('https://www.transparenttextures.com/patterns/papyros.png'); 
+  background-repeat: repeat;
+  background-size: auto;
+  
+  width: 100%;
+  max-width: 480px; 
+  padding: 60px 45px;
+  position: relative;
+  border: 3px solid #3d2b1f; 
+  
+
+  clip-path: polygon(1% 2%, 99% 1%, 100% 98%, 2% 100%, 0% 50%);
+  box-shadow: 0 0 50px rgba(0,0,0,0.9);
+}
+
+
+.creepy-title {
+  font-family: 'Pirata One', serif;
+  font-size: 2.5rem; 
+  color: #2c1a1a;
+  text-align: center;
+  margin-bottom: 10px; 
+  text-transform: uppercase;
+  z-index: 2;
+  position: relative;
+  line-height: 1.2; 
+  display: block;
+}
+
+
+.horror-form::before {
+  
+  display: block;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.15rem;
+  color: #5a4435;
+  margin-bottom: 45px; 
+  font-style: italic;
+  z-index: 2;
+  position: relative;
+}
+
+
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.input-group label {
+  font-family: 'Pirata One', serif;
+  display: block;
+  color: #3d2b1f;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.ink-input {
+  background: transparent !important;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
+  width: 100%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.45rem;
+  color: black;
+  padding: 6px 0;
+}
+
+.ink-input:focus {
+  outline: none;
+  border-bottom: 2px solid #8b0000;
+}
+
+
+.seal-button {
+  background: #8b0000;
+  color: #eee;
+  font-family: 'Pirata One', serif;
+  font-size: 1.55rem;
+  padding: 11px 26px;
+  border: none;
+  display: block;
+  margin: 30px auto 0;
+  cursor: pointer;
+  border-radius: 50% 45% 52% 48%; 
+  box-shadow: 3px 3px 12px rgba(0,0,0,0.5);
+  z-index: 2;
+  position: relative;
+}
+
+.seal-button:hover {
+  background: #a00000;
+  transform: scale(1.08);
+}

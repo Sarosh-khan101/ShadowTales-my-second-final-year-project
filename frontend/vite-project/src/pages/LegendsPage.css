@@ -1,0 +1,116 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), 
+                url('https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&q=80&w=2000'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0;
+    font-family: 'Crimson Text', serif;
+}
+
+.legends-container {
+    width: 100%;
+    padding: 100px 50px !important; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.page-title {
+    color: #b71c1c;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 120px !important; 
+    position: relative;
+    display: inline-block;
+}
+
+.page-title::after {
+    content: "";
+    position: absolute;
+    bottom: -40px; 
+    left: 10%;
+    width: 80%;
+    height: 5px;
+    background: #b71c1c;
+    box-shadow: 0 0 20px #b71c1c;
+}
+
+
+.legends-grid {
+    display: grid !important;
+    
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important; 
+    
+    
+    gap: 80px !important; 
+    
+    width: 100% !important;
+    max-width: 1600px;
+    margin: 0 auto !important;
+    padding: 20px;
+}
+
+
+.story-card {
+    background: rgba(15, 15, 15, 0.98);
+    border-left: 6px solid #b71c1c;
+    padding: 40px !important;
+    border-radius: 10px; 
+    text-align: left;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8); 
+    height:auto;
+    min-height:350px;
+    
+    margin: 10px; 
+    flex-shrink: 0;
+    
+
+               
+    max-width: 1200px;        
+    overflow: hidden;        
+    display: flex;
+    flex-direction: column;
+}
+
+
+.story-card:hover {
+    transform: scale(1.05) translateY(-20px); 
+    background: rgba(35, 0, 0, 0.95);
+    box-shadow: 0 30px 60px rgba(183, 28, 28, 0.3); 
+    border-color: #ef5350;
+}
+
+.story-card h2 {
+    color: #ffd54f;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+
+.story-card p:first-of-type {
+    font-style: italic;
+    color: #90a4ae;
+    margin-bottom: 40px !important; 
+    border-bottom: 1px solid rgba(183, 28, 28, 0.3);
+    padding-bottom: 10px;
+}
+
+    .story-card p {
+    line-height: 1.9;
+    color: #cfd8dc;
+    font-size: 1.15rem;
+    
+    word-wrap: break-word;      
+    overflow-wrap: break-word;   
+    white-space: normal;        
+    text-align: justify;        
+}
