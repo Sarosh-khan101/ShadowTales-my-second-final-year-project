@@ -1,4 +1,4 @@
-/* 1. Main Container: Sab kuch vertical aur horizontal center karne ke liye */
+
 .game-container {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
               url('https://images.unsplash.com/photo-1510137600163-2729bc6959a6?q=80&w=2000'); 
@@ -8,17 +8,17 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Screen ke upar-niche ke beech mein */
-  align-items: center;     /* Screen ke left-right ke beech mein */
+  justify-content: center; 
+  align-items: center;     
   color: white;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-family: 'Segoe UI', sans-serif;
-  text-align: center;      /* Text ko bhi center rakhega */
+  text-align: center;      
 }
 
-/* 2. Score Board: Title ko thoda glow do */
+
 .score-board h1 {
   font-size: 3rem;
   color: white;
@@ -26,7 +26,7 @@
   margin-bottom: 20px;
 }
 
-/* 3. Question Box: Ise center mein fix karne ke liye margin auto */
+
 .question-text {
   background: rgba(30, 0, 0, 0.8);
   color: white !important;
@@ -37,20 +37,19 @@
   border-radius: 60px;
   font-size: 24px;
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
-  margin: 20px auto; /* Auto margin se horizontal centering confirm hoti hai */
+  margin: 20px auto; 
 }
 
-/* 4. Options Grid: Buttons ko 2x2 mein center align karna */
+
 .options-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Do columns */
+  grid-template-columns: 1fr 1fr; 
   gap: 20px;
   width: 60%;
   max-width: 600px;
-  margin: 0 auto; /* Grid ko khud center mein lane ke liye */
+  margin: 0 auto; 
 }
 
-/* 5. Buttons: Style aur Glow */
 .options-container button {
   background: rgba(0, 0, 0, 0.6);
   color: white;
@@ -64,71 +63,71 @@
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
 
-/* Hover effect */
+
 .options-container button:hover {
   background: #ff0000;
   box-shadow: 0 0 25px #ff0000;
   transform: scale(1.05);
 }
 
-/* Jump Scare (Iska center hona sabse zaroori hai) */
-/* 1. Ye poore bhoot wale dappe ko screen ke size ka banayega */
+
+
 .scare-overlay {
-  position: fixed;   /* Screen par chipak jaye */
+  position: fixed;   
   top: 0;
   left: 0;
-  width: 100vw;      /* Poori screen ki chaudai */
-  height: 100vh;     /* Poori screen ki unchai */
-  background: black; /* Piche ka background black */
-  z-index: 9999;     /* Sabse upar dikhe (Buttons ke bhi upar) */
+  width: 100vw;      
+  height: 100vh;     
+  background: black; 
+  z-index: 9999;     
   margin: 0;
   padding: 0;
 }
 
-/* 2. Ye asli jadu hai jo image ko poori screen par failayega */
-/* 1. Ye poore bhoot wale dappe ko screen ke size ka banayega */
+
+
 .scare-overlay {
-  position: fixed;   /* Screen par chipak jaye */
+  position: fixed;   
   top: 0;
   left: 0;
-  width: 100vw;      /* Poori screen ki chaudai */
-  height: 100vh;     /* Poori screen ki unchai */
-  background: black; /* Piche ka background black */
-  z-index: 9999;     /* Sabse upar dikhe (Buttons ke bhi upar) */
+  width: 100vw;      
+  height: 100vh;     
+  background: black; 
+  z-index: 9999;     
   margin: 0;
   padding: 0;
 }
 
-/* 2. Ye asli jadu hai jo image ko poori screen par failayega */
-/* 1. Ye poore bhoot wale dappe ko screen ke size ka banayega */
+
+
 .scare-overlay {
-  position: fixed;   /* Screen par chipak jaye */
+  position: fixed;   
   top: 0;
   left: 0;
-  width: 100vw;      /* Poori screen ki chaudai */
-  height: 100vh;     /* Poori screen ki unchai */
-  background: black; /* Piche ka background black */
-  z-index: 9999;     /* Sabse upar dikhe (Buttons ke bhi upar) */
+  width: 100vw;      
+  height: 100vh;     
+  background: black; 
+  z-index: 9999;     
   margin: 0;
   padding: 0;
 }
 
 .scare-overlay {
-  position: fixed;   /* Screen par chipak jaye */
+  position: fixed;   
   top: 0;
   left: 0;
-  width: 100vw;      /* Poori screen ki chaudai */
-  height: 100vh;     /* Poori screen ki unchai */
-  background: black; /* Piche ka background black */
-  z-index: 9999;     /* Sabse upar dikhe (Buttons ke bhi upar) */
+  width: 100vw;      
+  height: 100vh;     
+  background: black; 
+  z-index: 9999;     
   margin: 0;
   padding: 0;
 }
 
-/* 2. Ye asli jadu hai jo image ko poori screen par failayega */
+
 .scare-overlay img {
-  width: 100%;       /* Image ko poora failao */
-  height: 100%;      /* Image ko poora failao */
-  object-fit: cover; /* Isse image stretch nahi hogi, balki poori screen cover karegi */
+  width: 100%;       
+  height: 100%;      
+  object-fit: cover; 
   display: block;
 }
