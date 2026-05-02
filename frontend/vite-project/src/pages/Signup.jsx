@@ -97,6 +97,15 @@ return (
             <br></br>
 
             <button type="submit" className="seal-button">Signup</button>
+            <br></br>
+            <hr></hr>
+            <hr></hr>
+       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginTop: '20px' }}>
+  <p style={{ color: 'black', margin: 0 }}>
+    If already have account click signin:
+  </p>
+  <button type="submit" className="seal-button" onClick={()=>{navigate("./signin")}}> Signin</button>
+</div>
 
 
         </form>
