@@ -8,7 +8,7 @@ const Dashboard = () => {
    if(confirmDelete){
     try{
       const idValue = localStorage.getItem("myUserId");
-      const response = await axios.post("http://localhost:5000/api/user/delete",{id: idValue});
+      const response = await axios.post("https://shadowtales-backend.onrender.com/api/user/delete",{id: idValue});
       if(response.status === 200 || response.status === 201){
         alert("Account deleted");
         localStorage.clear();

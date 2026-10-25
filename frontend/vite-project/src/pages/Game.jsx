@@ -12,7 +12,7 @@ const [showScare, setShowScare] = useState(false);
 useEffect(()=>{
   const getData = async ()=>{
     try{
-    const response = await axios.get('http://localhost:5000/api/questions');
+    const response = await axios.get('https://shadowtales-backend.onrender.com/api/questions');
     setQuestions(response.data);
     }catch(err){
       console.log(err);

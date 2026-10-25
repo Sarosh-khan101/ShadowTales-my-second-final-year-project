@@ -10,7 +10,7 @@ export default function LegendsPage(){
     const[stories, setStories] = useState([]); 
 
     useEffect(()=>{
-        axios.get(`http://localhost:5000/api/legends/${stateName}`)
+        axios.get(`https://shadowtales-backend.onrender.com/api/legends/${stateName}`)
         .then((res)=>{
             setStories(res.data);
         }).catch((err)=>{

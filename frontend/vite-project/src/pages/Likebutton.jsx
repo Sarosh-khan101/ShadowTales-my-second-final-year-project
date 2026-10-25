@@ -18,7 +18,7 @@
         }
         try{
         
-                 await axios.post(`http://localhost:5000/api/lcount`,{likes:newCount, id: storyId});
+                 await axios.post(`https://shadowtales-backend.onrender.com/api/lcount`,{likes:newCount, id: storyId});
             
         }catch(err){
                 console.log(err);

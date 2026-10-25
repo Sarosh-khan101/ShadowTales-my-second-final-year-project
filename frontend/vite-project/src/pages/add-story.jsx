@@ -29,7 +29,7 @@ export default function AddStrory() {
        }
 
          try{
-        const response  = await axios.post("http://localhost:5000/api/add-legend",{ 
+        const response  = await axios.post("https://shadowtales-backend.onrender.com/api/add-legend",{ 
             title: form.title,
             author: form.author,
             description: form.description,
