@@ -23,39 +23,6 @@ async function main() {
   await mongoose.connect(process.env.MONGO_URI);
 }
 
-
-
-// Ye test route lagayein
-app.get('/test', (req, res) => {
-    res.json({ success: true, message: "Backend is fully working!" });
-});
-
-
-// Database connection test route
-app.get('/db-test', async (req, res) => {
-    try {
-        // mongoose.connection.readyState: 1 matlab connected hai, 0 matlab disconnected
-        const dbState = mongoose.connection.readyState;
-        
-        if (dbState === 1) {
-            // Ek choti si query run karke dekhte hain ki database response de raha hai ya nahi
-            const collections = await mongoose.connection.db.listCollections().toArray();
-            res.json({ 
-                success: true, 
-                message: "Database is 100% Connected and Responding!", 
-                collectionsList: collections.map(c => c.name) // Aapke database ki tables/collections dikha dega
-            });
-        } else {
-            res.status(500).json({ 
-                success: false, 
-                message: "Database is NOT connected properly. State code: " + dbState 
-            });
-        }
-    } catch (error) {
-        res.status(500).json({ success: false, error: error.message });
-    }
-});
-
 //----------------------------------------------------------------------------------------
 app.post("/signup", async(req,res)=>{
      try{
