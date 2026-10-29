@@ -61,7 +61,7 @@ app.post("/signup", async(req,res)=>{
      try{
         const newUser = new Signup(req.body);
         await newUser.save();
-        const userId = user._id;
+        const userId = newUser._id;
         res.status(200).json({message:"User Created Successfully!",userId});
      } catch (error){
         console.log("Backend Error:",error.message);
