@@ -32,7 +32,8 @@ if(!form.fullname||!form.email||!form.password||!form.phonenumber||!form.age||!f
 }
 
 try{
-    const response = await axios.post("https://shadowtales-backend.onrender.com/signup",form);
+    const idValue = localStorage.getItem("myUserId");
+    const response = await axios.post("https://shadowtales-backend.onrender.com/signup",form,{id: idValue});
 if(response.status===201||response.status===200){
     setForm(
     {
