@@ -32,8 +32,7 @@ if(!form.fullname||!form.email||!form.password||!form.phonenumber||!form.age||!f
 }
 
 try{
-    const idValue = localStorage.getItem("myUserId");
-    const response = await axios.post("https://shadowtales-backend.onrender.com/signup",form,{id: idValue});
+    const response = await axios.post("https://shadowtales-backend.onrender.com/signup",form);
 if(response.status===201||response.status===200){
     setForm(
     {
@@ -44,6 +43,9 @@ if(response.status===201||response.status===200){
     age: "",
     city: ""
 });
+ if(response.data.userId){
+                localStorage.setItem("myUserId",response.data.userId);
+            }
 navigate("/dashboard");
 }
 
