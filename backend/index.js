@@ -23,6 +23,13 @@ async function main() {
   await mongoose.connect(process.env.MONGO_URI);
 }
 
+
+
+// Ye test route lagayein
+app.get('/test', (req, res) => {
+    res.json({ success: true, message: "Backend is fully working!" });
+});
+
 //----------------------------------------------------------------------------------------
 app.post("/signup", async(req,res)=>{
      try{
