@@ -43,9 +43,13 @@ if(response.status===201||response.status===200){
     age: "",
     city: ""
 });
- if(response.data.userId){
-                localStorage.setItem("myUserId",response.data.userId);
-            }
+ const userId = response.data.userId || response.data._id || (response.data.user && response.data.user._id);
+
+ if(userId){
+    localStorage.setItem("myUserId", userId);
+ } else {
+    console.log("Backend response mein ID nahi mili:", response.data);
+ }
 navigate("/dashboard");
 }
 
